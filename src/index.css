@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+:root {
+  --dark-purple: #353586;
+  --dark-purple--lighter: #7d7dbb;
+  --background: #0000469c;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6,label,span {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body, html, .App, #root, .auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login {
+  position: relative;
+
+}
+
+.login::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+  background-image: linear-gradient(45deg, var(--dark-purple) 25%, transparent 25%), linear-gradient(-45deg, var(--dark-purple) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, var(--dark-purple) 75%), linear-gradient(-45deg, transparent 75%, var(--dark-purple) 75%);
+  background-size: 300px 300px;
+  background-position: 0 0, 0 150px, 150px -150px, -150px 0px;
+}
+
+
+
+.auth-inner {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  box-shadow: 0px 14px 80px rgba(189, 190, 202, 0.4);
+  border-radius: 15px;
+  transition: all .3s;
+}
+
+.auth-inner .leaderboard-table {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.human-vs-human{
+  display: flex;
+  justify-content:flex-start;
+  padding : 4px;
+}
+
+.human-vs-human .igra{
+  margin: 0 16px 0 0;
+}
+
+.human-vs-human .info{
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  text-align: center;
+}
+
+
+.login-inner{
+  width: 450px;
+  padding: 40px 55px 40px 55px;
+  background-color:rgba(256, 256, 256, 0.9);
+}
+
+.game-inner{
+  padding: 16px;
+  background-color:var(--background);
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #8e6db4;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.game{
+  position: relative;
+  background-color: white;
+  display: flex;
+}
+
+button.btn.btn-primary {
+  background-color: var(--dark-purple);
+  border: none;
+}
+
+.leaderboard-title {
+  text-align: center;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.cemetary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.black-player-username {
+  text-align: center;
+}
+
+.grave {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.cemetary .grave:first-child {
+  margin-left: 0;
+}
+
+.grave img {
+  width: 40px;
+  height: 40px;
+}
